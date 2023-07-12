@@ -9,9 +9,8 @@
 - Tab Bar
 - Landscape Handling
 - Responsive Design
-- Redux with saga
-- Code Push with App center
-- Unit tests implemented using Jest
+- Code Push with App center (will do)
+- Unit tests implemented using Jest (will do)
 
 # Code Structure
 There are 3 major screens i.e Home page, Favorites and Book details.
@@ -37,3 +36,4 @@ cd book-store-app
 - Run Build for either OS
 - for iOS: npm run ios
 - for Android: npm run android
+

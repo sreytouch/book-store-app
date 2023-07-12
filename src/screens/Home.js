@@ -306,7 +306,7 @@ const Home = ({ navigation }) => {
                 </View>
 
                 <View style={{ paddingHorizontal: SIZES.padding, flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Text style={{ ...FONTS.h2, color: COLORS.white }}> sth to do </Text>
+                    <Text style={{ ...FONTS.h4, color: COLORS.white }}> (sth to do ...) </Text>
                 </View>
             </View>
         )
