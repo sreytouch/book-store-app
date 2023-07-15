@@ -6,6 +6,8 @@ import { BookDetail } from "./src/screens/";
 import { Search } from "./src/screens";
 import { Notification } from "./src/screens";
 import { ReadingPage } from "./src/screens"
+import { ReservationProccess } from "./src/screens"; 
+import { Profile } from "./src/screens";
 import Tabs from "./src/navigation/tabs";
 import { useFonts } from 'expo-font';
 
@@ -45,6 +47,8 @@ const App = () => {
                 <Stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
                 <Stack.Screen name="Notification" component={Notification} options={{ headerShown: false }} />
                 <Stack.Screen name="ReadingPage" component={ReadingPage} options={{ headerShown: false }} />
+                <Stack.Screen name="ReservationProccess" component={ReservationProccess} options={{ headerShown: false }} />
+                <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
                 
             </Stack.Navigator>
         </NavigationContainer>

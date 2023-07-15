@@ -6,18 +6,18 @@ import React from "react";import {
 } from 'react-native';
 import { COLORS, SIZES } from "../constants";
 
-const Notification = ({ navigation }) => {
+const Profile = ({ navigation }) => {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
 
         <ScrollView style={{ marginTop: SIZES.radius }}>
             <View>
-                <Text style={{textAlign:"center", fontSize:SIZES.h3, color:COLORS.gray}}> It is empty here :-( </Text>
+                <Text style={{textAlign:"center", fontSize:SIZES.h3, color:COLORS.gray}}> Profile </Text>
             </View>
         </ScrollView>
     </SafeAreaView>
     )
 }
 
-export default Notification;
+export default Profile;

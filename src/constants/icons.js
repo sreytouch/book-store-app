@@ -13,6 +13,12 @@ export const bookmark_icon = require("../../assets/icons/bookmark_icon.png");
 export const read_icon = require("../../assets/icons/read_icon.png");
 export const back_arrow_icon = require("../../assets/icons/back_arrow_icon.png");
 export const more_icon = require("../../assets/icons/more_icon.png");
+export const download_icon = require("../../assets/icons/download_icon.png");
+
+export const unpaid_icon = require("../../assets/icons/unpaid_icon.png");
+export const status_icon = require("../../assets/icons/status_icon.png");
+export const return_icon = require("../../assets/icons/return_icon.png");
+export const proccessing_icon = require("../../assets/icons/proccessing_icon.png");
 
 
 export default {
@@ -30,5 +36,10 @@ export default {
     bookmark_icon,
     read_icon,
     back_arrow_icon,
-    more_icon
+    more_icon,
+    download_icon,
+    unpaid_icon,
+    status_icon,
+    return_icon,
+    proccessing_icon
 }

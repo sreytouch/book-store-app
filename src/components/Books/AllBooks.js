@@ -1,52 +1,12 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image, FlatList } from 'react-native';
-import { FONTS, COLORS, SIZES, icons } from "../constants";
-import { categoriesDatas } from "../services/Books";
+import { FONTS, COLORS, SIZES, icons } from "../../constants";
+import { allBooks } from "../../services/Books";
 
-const Categories = ({ navigation }) => {
-    const [categories, setCategories] = React.useState(categoriesDatas);
-    const [selectedCategory, setSelectedCategory] = React.useState(1);
-
-    function renderCategoryHeader() {
-        const renderItem = ({ item }) => {
-            return (
-                <TouchableOpacity
-                    style={{ flex: 1, marginRight: SIZES.padding }}
-                    onPress={() => setSelectedCategory(item.id)}
-                >
-                    {
-                        selectedCategory == item.id &&
-                        <Text style={{ ...FONTS.h2, color: COLORS.white }}>{item.categoryName}</Text>
-                    }
-                    {
-                        selectedCategory != item.id &&
-                        <Text style={{ ...FONTS.h2, color: COLORS.lightGray }}>{item.categoryName}</Text>
-                    }
-                </TouchableOpacity>
-            )
-        }
-
-        return (
-            <View style={{ flex: 1, paddingLeft: SIZES.padding }}>
-                <FlatList
-                    data={categories}
-                    showsHorizontalScrollIndicator={false}
-                    renderItem={renderItem}
-                    keyExtractor={item => `${item.id}`}
-                    horizontal
-                />
-            </View>
-        )
-    }
+const AllBooks = ({ navigation }) => {
 
     function renderCategoryData() {
-        var books = []
-
-        let selectedCategoryBooks = categories.filter(a => a.id == selectedCategory)
-
-        if (selectedCategoryBooks.length > 0) {
-            books = selectedCategoryBooks[0].books
-        }
+        var books = allBooks[0].books;
 
         const renderItem = ({ item }) => {
             return (
@@ -140,7 +100,7 @@ const Categories = ({ navigation }) => {
         }
 
         return (
-            <View style={{ flex: 1, marginTop: SIZES.radius, paddingLeft: SIZES.padding }}>
+            <View style={{ flex: 1, marginTop: 0, paddingLeft: SIZES.padding }}>
                 <FlatList
                     data={books}
                     renderItem={renderItem}
@@ -156,12 +116,9 @@ const Categories = ({ navigation }) => {
     return (
         <View style={{ marginTop: 10 }}>
             <View>
-                {renderCategoryHeader()}
-            </View>
-            <View>
                 {renderCategoryData()}
             </View>
         </View>
     );
 }
-export default Categories;
+export default AllBooks;
